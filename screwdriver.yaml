@@ -12,7 +12,7 @@ shared:
   image: buildpack-deps
 
 parameters:
-  deploy_api: true
+  deploy_api: "true"
 
 # Job definition block
 # "main" is a default job that all pipelines have
@@ -57,5 +57,5 @@ jobs:
       # this step
       - run_arbitrary_script: ./my_script.sh
       - deploy: |
-          if [[ $deploy_api = true ]]; then
+          if [[ $deploy_api = "true" ]]; then
             echo deploy
