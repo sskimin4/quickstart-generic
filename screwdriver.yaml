@@ -69,8 +69,8 @@ jobs:
           echo $(meta get parameters.deploy_api)
   commit:
     requires: second_job
+    secrets:
+      - FOO
     steps:
       - commit: |
-          echo "Change By HHMIN" > README.md
-          git commit -o . -m "Commit ReadMe Change"
-          git push
+          echo $(meta get secrets.FOO)
