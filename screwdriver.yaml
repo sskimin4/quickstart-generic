@@ -71,5 +71,5 @@ jobs:
     requires: second_job
     steps:
       - commit: |
-        echo "Change By HHMIN" > README.md
-        git commit -o . -m "Commit ReadMe"
+          echo "Change By HHMIN" > README.md
+          git commit -o . -m "Commit ReadMe"
