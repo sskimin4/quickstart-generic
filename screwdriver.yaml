@@ -76,4 +76,4 @@ jobs:
       - commit: |
           echo "Change By HHMIN" > README.md
           git commit -o . -m "Commit ReadMe Change"
-          git push "https://${USER_NAME}:${PASSWORD}@github.com/sskimin4/quickstart.git" --tags
+          git push "https://${USER_NAME}:${PASSWORD}@github.com/sskimin4/quickstart-generic.git" --tags
