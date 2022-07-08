@@ -67,3 +67,7 @@ jobs:
           echo $(meta get parameters.skip_test.value)
           echo $(meta get parameters.test_coverage)
           echo $(meta get parameters.deploy_api)
+  commit:
+    requires: second_job
+    steps:
+      - commit: git
