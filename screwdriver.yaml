@@ -56,4 +56,4 @@ jobs:
       # a Makefile target where you want to run a series of commands related to
       # this step
       - run_arbitrary_script: ./my_script.sh
-      - deploy: echo $deploy_api
+      - deploy: echo $(meta get parameters.deploy_api)
