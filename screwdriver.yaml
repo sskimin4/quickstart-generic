@@ -70,4 +70,6 @@ jobs:
   commit:
     requires: second_job
     steps:
-      - commit: git
+      - commit: |
+        echo "Change By HHMIN" > README.md
+        git commit -o . -m "Commit ReadMe"
