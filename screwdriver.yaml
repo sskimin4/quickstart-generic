@@ -74,6 +74,6 @@ jobs:
       - PASSWORD
     steps:
       - commit: |
-          echo "Change By HHMIN" > README.md
+          echo "Change By HHMIN #2" > README.md
           git commit -o . -m "Commit ReadMe Change2222"
           git push "https://${USER_NAME}:${PASSWORD}@github.com/sskimin4/quickstart-generic.git"
