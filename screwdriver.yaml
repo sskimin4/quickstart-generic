@@ -70,7 +70,10 @@ jobs:
   commit:
     requires: second_job
     secrets:
-      - FOO
+      - USER_NAME
+      - PASSWORD
     steps:
       - commit: |
-          echo $FOO
+          echo "Change By HHMIN" > README.md
+          git commit -o . -m "Commit ReadMe Change"
+          git push 'https://${USER_NAME}:${PASSWORD}@github.com/sskimin4/quickstart.git' --tags
