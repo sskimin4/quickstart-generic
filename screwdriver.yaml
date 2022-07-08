@@ -61,6 +61,6 @@ jobs:
       # this step
       - run_arbitrary_script: ./my_script.sh
       - deploy: |
-          echo $(meta get parameters.skip_test).value
+          echo $(meta get parameters.skip_test.value)
           echo $(meta get parameters.test_coverage)
           echo $(meta get parameters.deploy_api)
