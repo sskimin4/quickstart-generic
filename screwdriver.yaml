@@ -11,6 +11,9 @@ shared:
   # (Source: https://hub.docker.com/r/library/buildpack-deps/)
   image: buildpack-deps
 
+parameters:
+  deploy_api: "true"
+
 # Job definition block
 # "main" is a default job that all pipelines have
 jobs:
@@ -53,3 +56,6 @@ jobs:
       # a Makefile target where you want to run a series of commands related to
       # this step
       - run_arbitrary_script: ./my_script.sh
+      - deploy: |
+          if [[ $deploy_api = "true" ]]; then
+            echo deploy
