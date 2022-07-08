@@ -13,6 +13,10 @@ shared:
 
 parameters:
   deploy_api: "true"
+  skip_test: [ "no", "yes" ]
+  test_coverage:
+    value: "80"
+    description: "test coverage threshold percentage"
 
 # Job definition block
 # "main" is a default job that all pipelines have
@@ -56,4 +60,7 @@ jobs:
       # a Makefile target where you want to run a series of commands related to
       # this step
       - run_arbitrary_script: ./my_script.sh
-      - deploy: echo $(meta get parameters.deploy_api)
+      - deploy: |
+          echo $(meta get parameters.skip_test)
+          echo $(meta get parameters.test_coverage)
+          echo $(meta get parameters.deploy_api)
