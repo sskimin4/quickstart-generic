@@ -1,4 +1,7 @@
 ---
+childPipelines:
+  scmUrls:
+    - git@github.com:sskimin4/quick-start-generic-child.git#main
 # Shared definition block
 # This is where you would define any attributes that all your jobs will
 # inherit. In our example, we state that all our Jobs will use the same Docker
