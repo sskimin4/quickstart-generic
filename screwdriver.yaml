@@ -59,3 +59,4 @@ jobs:
       - deploy: |
           if [[ $deploy_api = "true" ]]; then
             echo deploy
+          fi
