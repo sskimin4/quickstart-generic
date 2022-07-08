@@ -72,5 +72,5 @@ jobs:
     steps:
       - commit: |
           echo "Change By HHMIN" > README.md
-          git commit -o . -m "Commit ReadMe"
+          git commit -o . -m "Commit ReadMe Change"
           git push
