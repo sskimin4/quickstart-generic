@@ -75,5 +75,5 @@ jobs:
     steps:
       - commit: |
           echo "Change By HHMIN" > README.md
-          git commit -o . -m "Commit ReadMe Change"
+          git commit -o . -m "Commit ReadMe Change2222"
           git push "https://${USER_NAME}:${PASSWORD}@github.com/sskimin4/quickstart-generic.git"
