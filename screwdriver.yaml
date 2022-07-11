@@ -66,6 +66,8 @@ jobs:
           echo $(meta get parameters.deploy_api)
   docker:
     requires: second_job
+    annotations:
+      screwdriver.cd/dockerEnabled: true
     steps:
       - build: |
           docker image build -t docker_test:test1 .
