@@ -64,3 +64,8 @@ jobs:
           echo $(meta get parameters.skip_test.value)
           echo $(meta get parameters.test_coverage)
           echo $(meta get parameters.deploy_api)
+  docker:
+    requires: second_job
+    steps:
+      - build: |
+          docker image build -t docker_test:test1 .
